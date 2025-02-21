@@ -1,0 +1,63 @@
+$primary-color: #3a3a3a;
+$button-bg: #e9e9e9;
+$button-hover-bg: rgba(0, 0, 0, 0.8);
+$button-size: 45px;
+$icon-size: 20px;
+$text-muted: #888888;
+
+.product-slider {
+  color: $primary-color;
+  margin: 0 auto;
+
+  &__title {
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      font-size: 34px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+  }
+}
+
+@mixin swiper-button {
+  position: static;
+  background: $button-bg;
+  color: $text-muted;
+  border: none;
+  border-radius: 50%;
+  width: $button-size;
+  height: $button-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  svg {
+    width: $icon-size;
+  }
+
+  &::after {
+    display: none !important;
+  }
+
+  &:hover {
+    background: $button-hover-bg;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @include swiper-button;
+}

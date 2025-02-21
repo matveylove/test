@@ -1,0 +1,47 @@
+.button {
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+  &:active {
+    filter: brightness(0.9);
+  }
+}
+
+.red {
+  padding: 12px 35px;
+  color: white;
+  background-color: #e41d1b;
+}
+.gray {
+  padding: 12px 0;
+  border: 1px solid #888888;
+  color: #3a3a3a;
+  width: 100%;
+  background-color: transparent;
+}
+.big {
+  padding: 12px 73px;
+  color: white;
+  background-color: #e41d1b;
+}
+
+@media (max-width: 1650px) {
+  .red {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 1327px) {
+  .red {
+    padding: 12px 30px;
+  }
+}
+@media (max-width: 480px) {
+  .big {
+    padding: 12px 25px;
+  }
+}
